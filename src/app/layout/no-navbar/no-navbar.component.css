@@ -1,0 +1,46 @@
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "IBM Plex Sans Condensed", sans-serif !important;
+}
+
+a {
+  font-family: 'Inika', serif !important;
+}
+
+img {
+  width: 100%;
+}
+
+/* global */
+
+section {
+  padding: 40px 10px;
+}
+
+.img {
+  width: 150px;
+  height: 45px;
+}
+
+/* footer  */
+.footer span a {
+  font-size: 17.52px;
+  line-height: 21.7px;
+  font-weight: 400;
+}
+
+.footer p {
+  font-weight: 300;
+  font-size: 19.56px;
+  line-height: 24.23px;
+}
+
+/* footer  */

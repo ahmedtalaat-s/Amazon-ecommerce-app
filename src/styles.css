@@ -12,3 +12,8 @@ html::-webkit-scrollbar-thumb {
   background-color: rgb(47, 64, 84);
   border-radius: 5rem;
 }
+
+/* font */
+body {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+}

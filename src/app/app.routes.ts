@@ -8,16 +8,17 @@ import { RegisterComponent } from './modules/Auth/register/register.component';
 import { SignInComponent } from './modules/Auth/sign-in/sign-in.component';
 
 export const routes: Routes = [
-  { path: 'register', component: RegisterComponent },
-  {path:'signin',component:SignInComponent},
+  { path: 'register', component: RegisterComponent , title:'Register'},
+  {path:'signin',component:SignInComponent , title:'Sign In'},
   {
     path: '', component: WithNavbarComponent, children: [
-      { path: '', redirectTo:'home',title:'Home' },
+      { path: '', redirectTo:'home',pathMatch:'full',title:'Home' },
       { path: 'home', component: HomeComponent,title:'Home' },
       {path:'allproducts',component:AllProductsComponent, title:'All Products'},
       {path:'product',component:SingleProductComponent , title:'Details'},
       {path:'**',component:NotFound404Component,title:'Not Found'},
     ]
-  }
+  },
+
 
 ];

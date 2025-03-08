@@ -10,14 +10,5 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './all-products.component.css'
 })
 export class AllProductsComponent {
-  constructor(private productsServises: ProductsService) { }
 
-  ngOnInit(): void{
-    this.productsServises.getAllProducts().subscribe({
-      next: (res) => {
-        console.log(res);
-
-      }
-    })
-  }
 }

@@ -8,5 +8,6 @@ export const environment = {
   messagingSenderId: "555560372799",
   appId: "1:555560372799:web:5ec6c19e53c07c7d63068a",
   measurementId: "G-3XZMDXCELK"
-}
+  },
+  mockApi:'https://67cae8d83395520e6af39859.mockapi.io/amazon/'
 }

@@ -1,0 +1,239 @@
+*{
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.thePage{
+    width:100%;
+    height:100vh;
+    margin-top:20px;
+    display:flex;
+    flex-direction:row;
+    gap:8px;
+    height:fit-content;
+}
+
+
+
+.cards{
+  width:80%;
+  height:fit-content;
+}
+
+.card{
+  border-width: 1.08px;
+  padding:30px 10px;
+  max-width: 276px;
+  min-height: 567px;
+  margin-bottom:30px;
+}
+
+.card img{
+  max-width: 255.0794219970703px;
+  min-height: 195.76707458496094px;
+  margin-bottom:23.73px;
+  object-fit: cover;
+  cursor:pointer;
+}
+.card-body {
+  padding:0px;
+  max-width: 255.0794219970703px;
+  min-height: 80px;
+}
+.card-body h6{
+  cursor:pointer;
+}
+.card-body .card-title {
+  font-weight: 500;
+  font-size: 17.4px;
+  line-height: 19.58px;
+  color: #000000;
+  margin-bottom:16.18px;
+}
+
+.rating{
+  max-width: 172.03231811523438px;
+  min-height: 20.429637908935547px;
+  margin-bottom: -3px;
+}
+
+svg.fa-star {
+  width: 12.49px;
+  height: 12.44px;
+  color: #FFCC00;
+}
+
+svg.fa-chevron-down{
+  margin-left:7.55px;
+  margin-right:10.78px;
+  color:#000000;
+  width: 20px;
+  height: 14px;
+}
+
+.number-of-people{
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20.63px;
+  letter-spacing: 0%;
+  color: #1F8394;
+  margin-top:-5px;
+}
+
+.grey-text{
+  font-weight: 400;
+  font-size: 12.94px;
+  line-height: 16.03px;
+  color: #717171;
+}
+
+.price-cart{
+  font-weight: 400;
+  font-size: 21.57px;
+  line-height: 26.1px;
+  margin-bottom:0px;
+}
+.price-cart .grey-text{
+  font-weight: 400;
+  font-size: 13.42px;
+  line-height: 16.25px;
+  margin-bottom:16.18px;
+}
+
+.grey-text-2{
+  font-weight: 300;
+  font-size: 12.94px;
+  line-height: 15.66px;
+  color: #7F7F7F;
+  margin-bottom:16.18px;
+}
+
+.delivery{
+  font-weight: 300;
+  font-size: 12.94px;
+  line-height: 15.66px;
+}
+.delivery span{
+  font-weight: 600;
+  font-size: 12.94px;
+  line-height: 15.66px;
+}
+
+
+/***********************************************************/
+.filters{
+  width:20%;
+  padding-left:30px;
+}
+
+.delivery-day{
+  margin-bottom:50px;
+}
+.delivery-day h5{
+  font-weight: 600;
+  font-size: 14.23px;
+  line-height: 100%;
+  color: #000000;
+  margin-bottom:13.54px;
+  margin-top:2px;
+}
+ .select{
+  max-width: 119.1355972290039px;
+  height: 15px;
+  display:flex;
+  gap: 4.45px;
+}
+
+.select .circle{
+  width: 11px;
+  height: 11px;
+  border: 0.89px solid #000000;
+  border-radius:50%;
+  cursor:pointer;
+}
+ .select .choise{
+  font-weight: 400;
+  font-size: 12.45px;
+  line-height: 100%;
+  text-align: center;
+  background: #000000;
+  margin-top:1.3px;
+  cursor:pointer;
+}
+
+
+.customer-reviews{
+  max-width: 129.80445861816406px;
+  height: 45.536380767822266px;
+  margin-bottom: 50px;
+}
+
+.customer-reviews h5{
+  font-weight: 600;
+  font-size: 14.23px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 13.54px;
+}
+.customer-reviews .number-of-people{
+  font-weight: 400;
+  font-size: 12.45px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+  margin-left:7px;
+  margin-top:1.7px;
+}
+
+.brands{
+  max-width: 119.1355972290039px;
+  height: 180.30999755859375px;
+  margin-bottom: 50px;
+}
+
+.brands h5{
+  font-weight: 700;
+  font-size: 14.23px;
+  line-height: 100%;
+  color: #000000;
+  margin-bottom:8.33px;
+}
+
+.brands .select{
+  margin-bottom:8.33px;
+}
+
+.brands .select .choise{
+  font-weight: 400;
+  font-size: 12.45px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+}
+
+
+
+.price{
+  max-width: 150px;
+  height: 159.68190002441406px;
+}
+
+.price h5{
+  margin-bottom: 13.54px;
+  font-weight: 600;
+  font-size: 14.23px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.price .select{
+  margin-bottom: 8.33px;
+}
+
+
+
+@media(max-width:576px){
+  .col-12.col-sm-6.col-md-4.col-lg-3{
+    display:flex;
+    justify-content:center
+  }
+}

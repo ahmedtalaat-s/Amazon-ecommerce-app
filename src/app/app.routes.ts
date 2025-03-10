@@ -21,7 +21,7 @@ export const routes: Routes = [
     path: '', component: WithNavbarComponent, children: [
       { path: 'home', component: HomeComponent,title:'Home' },
       {path:'allproducts',component:AllProductsComponent, title:'All Products',pathMatch:'full'},
-      {path:'product',component:SingleProductComponent , title:'Details',pathMatch:'full'},
+      {path:'product/:id',component:SingleProductComponent , title:'Details',pathMatch:'full'},
       {path:'**',component:NotFound404Component,title:'Not Found',pathMatch:'full'},
     ]
   }

@@ -1,0 +1,26 @@
+.nav-item .nav-link {
+  /* background-color: brown; */
+  margin-inline: 20px;
+}
+.nav-item .nav-link a {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav-item .nav-link span {
+  font-weight: 400;
+  font-size: 18px;
+}
+section {
+    background-color: var(--bg-main-footer);
+}
+section ul li {
+  list-style: none;
+}
+section ul li.item{
+
+    /* background-color: brown; */
+    margin-inline:10px ;
+    font-weight: 700;
+    font-size: 15px;
+}

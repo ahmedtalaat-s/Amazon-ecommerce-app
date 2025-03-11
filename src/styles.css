@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Gujarati:wght@100..900&display=swap");
+:root {
+  --ancor-color: #1f8394;
+  --white-color: white;
+  --bg-home-color: #575757;
+  --bg-back-to-top:#37475A;
+  --bg-main-footer:#232F3E;
+  --bg-sec-footer:#131A22;
+  --text-footer-color:#999999;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ancor-color);
+}
+

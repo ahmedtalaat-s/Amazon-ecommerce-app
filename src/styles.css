@@ -38,8 +38,8 @@ body {
   transition: background-color 0.5s linear, color 0.5s linear;
 }
 .add-to-card:hover{
-  color: #FFCC00;
-  background-color: black;
+  color: white;
+  background-color: #ffd54f;
 }
 
 ::selection{

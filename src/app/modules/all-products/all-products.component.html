@@ -1,1 +1,134 @@
-<p>all-products works!</p>
+<div class='thePage'>
+  <div class='filters'>
+
+      <div class='delivery-day'>
+        <h5>Delivery Day</h5>
+        <div class='select'>
+          <div class='circle'  data-for="in-2-days"></div>
+          <p class='choise' id="in-2-days">Get It in 2 Days</p>
+        </div>
+      </div>
+
+
+      <div class='customer-reviews'>
+        <h5>Customer Reviews</h5>
+
+        <div class='rating d-flex'>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <h5 class='number-of-people'>& up</h5>
+        </div>
+      </div>
+
+
+
+      <div class='brands'>
+        <h5>Brands</h5>
+        <div class='select'>
+          <div class='circle' data-for="sumsung"></div>
+          <p class='choise' id="sumsung">Samsung</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="lg"></div>
+          <p class='choise' id="lg">LG</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="haier"></div>
+          <p class='choise' id="haier">Haier</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="daikin"></div>
+          <p class='choise' id="daikin">Daikin</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="godrej"></div>
+          <p class='choise' id="godrej">Godrej</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="ifb"></div>
+          <p class='choise' id="ifb">IFB</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="panasonic"></div>
+          <p class='choise' id="panasonic">Panasonic</p>
+        </div>
+
+      </div>
+
+
+
+
+      <div class='price'>
+        <h5>Price</h5>
+        <div class='select'>
+          <div class='circle' data-for="all"></div>
+          <p class='choise' id="all">All</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="price-1"></div>
+          <p class='choise' id="price-1">₹5900 to ₹10,000</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="price-2"></div>
+          <p class='choise' id="price-2">₹10000 to ₹20000</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="price-3"></div>
+          <p class='choise' id="price-3">₹20000 to ₹30000</p>
+        </div>
+
+        <div class='select'>
+          <div class='circle' data-for="price-4"></div>
+          <p class='choise' id="price-4">₹30000 to ₹45000</p>
+        </div>
+
+      </div>
+
+
+
+
+  </div>
+
+
+  <div class='cards'>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let item of products">
+            <div class="card">
+                <img class="card-img-top" src="{{item.image}}" alt="" [routerLink]="['/product',item.id]">
+                <div class="card-body w-100">
+                    <h6 class="card-title" [routerLink]="['/product',item.id]">{{item.title}}</h6>
+                    <div class='rating d-flex'>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <h5 class='number-of-people'>{{item.numberOfRatings}}</h5>
+                    </div>
+                    <p class='grey-text'>300+ bought in past month</p>
+                    <h5 class="price-cart">₹{{item.price}} <span class='grey-text'>({{item.discount}}% off)</span></h5>
+                    <p class='grey-text-2'>Save extra with No Cost EMI</p>
+                    <p class='delivery'>FREE delivery by <span>{{item.date}},<br>
+                      7:00 am - 9:00 pm</span></p>
+                    <div class='add-to-card'>Add to cart</div>
+                </div>
+            </div>
+        </div>
+
+
+
+  </div>
+  </div>

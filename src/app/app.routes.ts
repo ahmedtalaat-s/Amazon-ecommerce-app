@@ -6,17 +6,23 @@ import { SingleProductComponent } from './modules/single-product/single-product.
 import { NotFound404Component } from './shared/not-found-404/not-found-404.component';
 import { RegisterComponent } from './modules/Auth/register/register.component';
 import { SignInComponent } from './modules/Auth/sign-in/sign-in.component';
+import { NoNavbarComponent } from './layout/no-navbar/no-navbar.component';
 
 export const routes: Routes = [
-  { path: 'register', component: RegisterComponent },
-  {path:'signin',component:SignInComponent},
+      { path: '', redirectTo:'home',pathMatch:'full' },
+
+{
+    path: '', component: NoNavbarComponent, children: [
+      { path: 'register', component: RegisterComponent,title:'Register' ,pathMatch:'full' },
+  {path:'signin',component:SignInComponent,title:'Sign in' ,pathMatch:'full'}
+  ]},
+
   {
     path: '', component: WithNavbarComponent, children: [
-      { path: '', redirectTo:'home',title:'Home' },
       { path: 'home', component: HomeComponent,title:'Home' },
-      {path:'allproducts',component:AllProductsComponent, title:'All Products'},
-      {path:'product',component:SingleProductComponent , title:'Details'},
-      {path:'**',component:NotFound404Component,title:'Not Found'},
+      {path:'allproducts',component:AllProductsComponent, title:'All Products',pathMatch:'full'},
+      {path:'product/:id',component:SingleProductComponent , title:'Details',pathMatch:'full'},
+      {path:'**',component:NotFound404Component,title:'Not Found',pathMatch:'full'},
     ]
   }
 

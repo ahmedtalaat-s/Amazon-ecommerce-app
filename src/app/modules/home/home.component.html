@@ -179,12 +179,12 @@
         Min. 50% off | Unique kitchen finds | Amazon Brands & more
       </h3>
       <a href="/src/app/modules/all-products/all-products.component.html" class="Link">See all</a>
-      <button class="carousel-btns prev-btns" (click)="prevSlide()">❮</button>
+      <button class="carousel-btns prev-btns" (click)="PrevSlide()">❮</button>
 
       <div class="carousel-containers">
         <div
           class="carousel-tracks"
-          [style.transform]="'translateX(' + -currentIndex * itemWidth + 'px)'"
+          [style.transform]="'translateX(' + -currentIndexs * itemWidths + 'px)'"
         >
           <div
             *ngFor="let img of slidtwo; let i = index"
@@ -199,10 +199,10 @@
         </div>
       </div>
 
-      <button class="carousel-btns next-btns" (click)="nextSlide()">❯</button>
+      <button class="carousel-btns next-btns" (click)="NextSlide()">❯</button>
 
       <div class="progress-bars">
-        <div class="progress-fills" [style.width]="progressWidth + '%'"></div>
+        <div class="progress-fills" [style.width]="progressWidths + '%'"></div>
       </div>
     </div>
     <!-- ==================================================end slide imgs section two====================================================== -->

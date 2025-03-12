@@ -185,6 +185,9 @@ a{
       width: 100%;
     }
   }
+  .carousels{
+    height: fit-content;
+  }
 
   .carousel-containers {
     overflow-x: scroll;
@@ -197,9 +200,9 @@ a{
   }
 
   .carousel-items {
-    min-width: 120px;
+    min-width: 150px;
+    height: 165px;
     margin: 0 3px;
-    justify-content: space-evenly;
   }
 
   .carousel-btns {
@@ -210,7 +213,8 @@ a{
     height: 3px;
   }
   .carousel-imgs{
-    object-fit: cover;
     max-width:150px ;
+    height: 150px;
+    object-fit: contain;
   }
 }

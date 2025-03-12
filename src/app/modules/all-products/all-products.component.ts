@@ -79,7 +79,7 @@ export class AllProductsComponent implements OnInit {
         this.allProducts[2], this.allProducts[10]
       ];
     } else if (priceId === 'price-1' || priceId === 'price-3') {
-      this.products = []; // شاشة بيضاء لا تظهر أي منتجات
+      this.products = []; 
     } else if (priceId === 'all') {
       this.products = [...this.allProducts];
     }

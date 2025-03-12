@@ -69,14 +69,14 @@ export class AllProductsComponent implements OnInit {
   filterByPrice(priceId: string) {
     if (priceId === 'price-2') {
       this.products = [
-        this.allProducts[1], this.allProducts[3], this.allProducts[4],
-        this.allProducts[5], this.allProducts[6], this.allProducts[7],
-        this.allProducts[8], this.allProducts[9], this.allProducts[11],
-        this.allProducts[12]
+        this.allProducts[0], this.allProducts[2], this.allProducts[3],
+        this.allProducts[4], this.allProducts[5], this.allProducts[6],
+        this.allProducts[7], this.allProducts[8], this.allProducts[10],
+        this.allProducts[11]
       ];
     } else if (priceId === 'price-4') {
       this.products = [
-        this.allProducts[2], this.allProducts[10]
+        this.allProducts[1], this.allProducts[9]
       ];
     } else if (priceId === 'price-1' || priceId === 'price-3') {
       this.products = []; 

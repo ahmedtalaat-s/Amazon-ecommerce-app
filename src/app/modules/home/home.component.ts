@@ -232,6 +232,7 @@ export class HomeComponent {
     'assets/images/Make-A-dough.png',
     'assets/images/Foodbox.png',
   ];
+  // slider one
   currentIndex = 0;
   itemWidth = 160;
   totalImages = this.slidone.length;
@@ -357,5 +358,39 @@ export class HomeComponent {
 
   selectItem(item: any) {
     this.x = item;
+  }
+
+
+
+  // slider two 
+  currentIndexs = 0;
+  itemWidths = 160;
+  TotalImages = this.slidtwo.length;
+  progressWidths = 0;
+
+  PrevSlide() {
+    if (this.currentIndexs > 0) {
+      this.currentIndexs--;
+      this.UpdateProgress();
+    }
+  }
+
+  NextSlide() {
+    if (this.currentIndexs < this.TotalImages - 1) {
+      this.currentIndexs++;
+      this.UpdateProgress();
+    }
+  }
+
+  UpdateProgress() {
+    this.progressWidths = ((this.currentIndexs + 1) / this.TotalImages) * 100;
+  }
+
+  @HostListener('window:resize')
+  OnResize() {
+    const item = document.querySelector('.carousel-items') as HTMLElement;
+    if (item) {
+      this.itemWidth = item.offsetWidth + 10;
+    }
   }
 }

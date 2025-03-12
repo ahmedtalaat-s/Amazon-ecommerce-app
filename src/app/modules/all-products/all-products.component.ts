@@ -32,37 +32,7 @@ export class AllProductsComponent implements OnInit {
     });
 
     this.addFilterEventListeners();
-
-    const elements = document.querySelectorAll('.circle, .choise') as NodeListOf<HTMLElement>;
-
-    elements.forEach(element => {
-      element.addEventListener('click', () => {
-        let targetCircle: HTMLElement | null = null;
-
-        if (element.classList.contains('circle')) {
-          targetCircle = element;
-        } else if (element.classList.contains('choise')) {
-          const relatedCircle = document.querySelector(`.circle[data-for="${element.id}"]`);
-          if (relatedCircle) {
-            targetCircle = relatedCircle as HTMLElement;
-          }
-        }
-
-        if (targetCircle) {
-          document.querySelectorAll('.circle').forEach(circle => {
-            (circle as HTMLElement).style.borderColor = '#ddd'; 
-          });
-
-          targetCircle.style.borderColor = '#1F8394';
-          targetCircle.style.borderWidth = '2px';
-        }
-
-        if (element.id === 'all') {
-          this.products = [...this.allProducts];
-          console.log('All products displayed.');
-        }
-      });
-    });
+    this.addPriceFilterEventListeners();
   }
 
   addFilterEventListeners() {
@@ -83,5 +53,48 @@ export class AllProductsComponent implements OnInit {
         console.log(`Filtered Products for ${brand}:`, this.products);
       }
     });
+  }
+
+  addPriceFilterEventListeners() {
+    const priceElements = document.querySelectorAll('.select .choise') as NodeListOf<HTMLElement>;
+
+    priceElements.forEach(element => {
+      element.addEventListener('click', () => {
+        this.filterByPrice(element.id);
+        this.updateCircleBorder(element.id);
+      });
+    });
+  }
+
+  filterByPrice(priceId: string) {
+    if (priceId === 'price-2') {
+      this.products = [
+        this.allProducts[1], this.allProducts[3], this.allProducts[4],
+        this.allProducts[5], this.allProducts[6], this.allProducts[7],
+        this.allProducts[8], this.allProducts[9], this.allProducts[11],
+        this.allProducts[12]
+      ];
+    } else if (priceId === 'price-4') {
+      this.products = [
+        this.allProducts[2], this.allProducts[10]
+      ];
+    } else if (priceId === 'price-1' || priceId === 'price-3') {
+      this.products = []; // شاشة بيضاء لا تظهر أي منتجات
+    } else if (priceId === 'all') {
+      this.products = [...this.allProducts];
+    }
+    console.log(`Filtered products for ${priceId}:`, this.products);
+  }
+
+  updateCircleBorder(selectedId: string) {
+    document.querySelectorAll('.circle').forEach(circle => {
+      (circle as HTMLElement).style.borderColor = '#ddd';
+    });
+
+    const targetCircle = document.querySelector(`.circle[data-for="${selectedId}"]`) as HTMLElement;
+    if (targetCircle) {
+      targetCircle.style.borderColor = '#1F8394';
+      targetCircle.style.borderWidth = '2px';
+    }
   }
 }

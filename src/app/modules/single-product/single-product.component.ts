@@ -1,4 +1,5 @@
-import { Component , Input, input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../../services/products.service';
 
 @Component({
@@ -8,28 +9,24 @@ import { ProductsService } from '../../services/products.service';
   templateUrl: './single-product.component.html',
   styleUrl: './single-product.component.css'
 })
-
-
 export class SingleProductComponent implements OnInit {
-  @Input() product: any; 
-  ActivatedRoute: any;
-  private _Product: any;
-  _ProductService: any;
+  product: any;
 
-  constructor (private_productservice: ProductsService ){
-    this.product = this.ActivatedRoute.snapshot.params.id;
-  }
+  constructor(
+    private productService: ProductsService,
+    private activatedRoute: ActivatedRoute 
+  ) {}
 
   ngOnInit(): void {
-    this._Product = this._ProductService. getProductById() .subscribe ({
-      next: (Response: any) => {
-        this._Product = Response ;
-      }
-    });
-    
+    const productId = this.activatedRoute.snapshot.paramMap.get('id');
+
+    if (productId) {
+      this.productService.getProductById(productId).subscribe({
+        next: (response) => {
+          this.product = response; 
+        },
+
+      });
+    }
   }
-
-
-
-
 }

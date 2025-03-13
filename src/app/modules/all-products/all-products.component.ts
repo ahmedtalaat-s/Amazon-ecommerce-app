@@ -1,17 +1,22 @@
+
 import { Component, inject, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
+
 @Component({
   selector: 'app-all-products',
   standalone: true,
+
   imports: [NgFor, RouterLink],
+
   templateUrl: './all-products.component.html',
   styleUrl: './all-products.component.css'
 })
 export class AllProductsComponent implements OnInit {
   constructor(private _ProductsService: ProductsService) {}
+
 
   products: any[] = [];
   allProducts: any[] = [];
@@ -97,4 +102,6 @@ export class AllProductsComponent implements OnInit {
       targetCircle.style.borderWidth = '2px';
     }
   }
+
 }
+

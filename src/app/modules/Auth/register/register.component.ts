@@ -21,6 +21,7 @@ export class RegisterComponent {
 
   ngOnInit(): void{
     window.scrollTo(0,0)
+
     this.createSignUpForm()
 
 }
@@ -43,8 +44,10 @@ export class RegisterComponent {
 
     this._authservice.signup(email, password).subscribe({
       next: (res) => {
+
         localStorage.setItem('currentUserUID', res.user.uid)
         this._authservice.currentUser.next(localStorage.getItem('currentUserUID'))
+
         this._authservice.updateName(res.user, userName).subscribe({
           next: (res) => {
           setTimeout(() => {

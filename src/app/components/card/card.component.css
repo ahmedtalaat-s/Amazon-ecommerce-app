@@ -1,0 +1,13 @@
+.container-cards .product-item figure {
+  margin: 2px auto;
+}
+.container-cards .product-item figcaption {
+  padding: 4px;
+}
+
+.container-cards .product {
+  background-color: var(--white-color);
+}
+section {
+  background-color: var(--bg-home-color);
+}

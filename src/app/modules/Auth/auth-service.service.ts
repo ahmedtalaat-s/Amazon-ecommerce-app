@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile,signOut } from 'firebase/auth';
-import { from, Observable } from 'rxjs';
+
+import { BehaviorSubject, from, Observable } from 'rxjs';
+
 import { auth } from '../../../firebase';
 
 @Injectable({
@@ -8,7 +10,11 @@ import { auth } from '../../../firebase';
 })
 export class AuthServiceService {
 
-  constructor() { }
+
+  currentUser = new BehaviorSubject<any>(localStorage.getItem('currentUserUID'));
+  constructor() {
+  }
+
 
    signup(email:string,password:string):Observable<any>  {
    return from(createUserWithEmailAndPassword(auth, email, password));

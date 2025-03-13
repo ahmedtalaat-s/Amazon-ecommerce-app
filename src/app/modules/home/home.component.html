@@ -1,3 +1,212 @@
-<!-- <app-slider></app-slider> -->
-<app-card></app-card>
+
+<section class="section1">
+  <!-- ==============================================start slider background===================================================== -->
+  <div id="div" class="container-fluid p-0">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="assets/images/background.png"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/images/background.png"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/images/background.png"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- ==============================================end slider background===================================================== -->
+  <div id="card-container" class="d-flex flex-wrap">
+    <!-- ==============================================start cards section one===================================================== -->
+
+    <div *ngFor="let category of data" id="card" class="d-flex flex-wrap gap-1">
+      <h4 class="w-100">{{ category.title }}</h4>
+
+      <div
+        class="text-white text-center"
+        style="width: 135px; height: 157px; gap: 5px"
+        *ngFor="let item of category.items"
+      >
+        <img [src]="item.img" [alt]="item.name" class="w-100 h-75" />
+        <p>{{ item.name }}</p>
+      </div>
+
+      <a href="/src/app/modules/all-products/all-products.component.html">{{category.TextLink}}</a>
+    </div>
+    <!-- ==============================================end cards section one===================================================== -->
+
+    <!-- ==================================================start slide imgs section one====================================================== -->
+    <div class="carousels">
+      <h3>Best Sellers in Clothing & Accessories</h3>
+      <button class="carousel-btns prev-btns" (click)="prevSlide()">❮</button>
+
+      <div class="carousel-containers">
+        <div
+          class="carousel-tracks"
+          [style.transform]="'translateX(' + -currentIndex * itemWidth + 'px)'"
+        >
+          <div
+            *ngFor="let img of slidone; let i = index"
+            class="carousel-items"
+          >
+            <img class="carousel-imgs" [src]="img" />
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btns next-btns" (click)="nextSlide()">❯</button>
+
+      <div class="progress-bars">
+        <div class="progress-fills" [style.width]="progressWidth + '%'"></div>
+      </div>
+    </div>
+    <!-- ==================================================end slide imgs section one====================================================== -->
+    <!-- ==============================================start cards section two===================================================== -->
+    <div id="card-container-two" class="d-flex flex-wrap">
+      <!-- {{0}} -->
+      <div id="card" class="d-flex flex-wrap gap-1">
+        <h4>Best Sellers in Toys & Games</h4>
+        <div class="w-100">
+          <img id="imgcard" [src]="x?.img" alt="">
+          <p class="w-100">{{x?.name}}</p>
+          <h5><sup>₹</sup>{{x?.price}}<sup>00</sup></h5>          
+        </div>
+        <div
+          class="text-white text-center d-flex "
+          style="width: 59px; height: 80px; gap: 5px"
+          *ngFor="let items of Data[0].items"
+        >
+          <button class="image-btn" (click)="selectItem(items)">
+            <img [src]="items.img" [alt]="" class="w-100 h-75" />
+          </button>
+        </div>
+      </div>
+      <!-- {{1}} -->
+      <div id="card" class="d-flex flex-wrap gap-1">
+        <h4>{{ Data[1].title }}</h4>
+        <div
+          class="text-white text-center"
+          style="width: 135px; height: 157px; gap: 5px"
+          *ngFor="let items of Data[1].items"
+        >
+          <img [src]="items.img" [alt]="" class="w-100 h-75" />
+        </div>
+
+        <a href="/src/app/modules/all-products/all-products.component.html">Explore more</a>
+      </div>
+      <!-- {{2}} -->
+      <div id="card" class="d-flex flex-wrap gap-1">
+        <h4>{{ Data[2].title }}</h4>
+        <div
+          class="text-white text-center"
+          style="width: 135px; height: 162px; gap:5px"
+          *ngFor="let items of Data[2].items"
+        >
+          <img style="width: 100%; object-fit: contain;" [src]="items.img" [alt]="" class="w-100 h-75" />
+        </div>
+      </div>
+      <!-- {{3}} -->
+      <div id="card" class="d-flex flex-wrap gap-1">
+        <h4>{{ Data[3].title }}</h4>
+        <div
+          class="text-white text-center"
+          style="width: 135px; height: 157px; gap: 5px"
+          *ngFor="let items of Data[3].items"
+        >
+          <img [src]="items.img" [alt]="" class="w-100 h-75" />
+          <p>{{ items.name }}</p>
+        </div>
+
+        <a href="/src/app/modules/all-products/all-products.component.html">See more</a>
+      </div>
+    </div>
+    <!-- ==============================================end cards section two===================================================== -->
+    <!-- ==================================================start slide imgs section two====================================================== -->
+    <div class="carousels">
+      <h3 style="display: inline; margin-right: 15px">
+        Min. 50% off | Unique kitchen finds | Amazon Brands & more
+      </h3>
+      <a href="/src/app/modules/all-products/all-products.component.html" class="Link">See all</a>
+      <button class="carousel-btns prev-btns" (click)="PrevSlide()">❮</button>
+
+      <div class="carousel-containers">
+        <div
+          class="carousel-tracks"
+          [style.transform]="'translateX(' + -currentIndexs * itemWidths + 'px)'"
+        >
+          <div
+            *ngFor="let img of slidtwo; let i = index"
+            class="carousel-items"
+          >
+            <img
+              class="carousel-imgs"
+              
+              [src]="img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btns next-btns" (click)="NextSlide()">❯</button>
+
+      <div class="progress-bars">
+        <div class="progress-fills" [style.width]="progressWidths + '%'"></div>
+      </div>
+    </div>
+    <!-- ==================================================end slide imgs section two====================================================== -->
+  </div>
+</section>
 

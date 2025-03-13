@@ -18,13 +18,17 @@ export class ProductsService {
   getAllProducts(): Observable<any>{
     return this.httpclient.get(this.baseUrl+'allproducts')
   }
+
   // get all products
+
 
   // get a product by id
   getProductById(id:any): Observable<any>{
     return this.httpclient.get(this.baseUrl+`allproducts/${id}`)
   }
+
   // get a product by id
+
 
   // get brands
 
@@ -41,8 +45,6 @@ export class ProductsService {
     })
   );
 }
-
-
   // get brands
 
 
@@ -62,6 +64,7 @@ export class ProductsService {
   }
   // filter by brand
 
+
   // search products
   searchBy(input:string):Observable<any> {
     return this.getAllProducts().pipe(
@@ -76,5 +79,7 @@ export class ProductsService {
       })
     )
   }
+
   // search products
+
 }

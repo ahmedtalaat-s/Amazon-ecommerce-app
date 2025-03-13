@@ -22,7 +22,7 @@
     "@tailwindcss/postcss": "^4.0.9",
     "bootstrap": "^5.3.3",
 
-    "ngx-owl-carousel-o": "^19.0.0",
+    "ngx-owl-carousel-o": "^17.0.0",
     "postcss": "^8.5.3",
 
     "firebase": "^11.4.0",

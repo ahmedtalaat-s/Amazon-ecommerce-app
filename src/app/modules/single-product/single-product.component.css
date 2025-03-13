@@ -1,0 +1,164 @@
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
+
+.rate {
+    width: 85%;
+}
+
+.line {
+    height: 2px;
+    width: 99%;
+    margin: auto;
+    background-color: rgb(194, 194, 194);
+}
+.paying{
+    height: max-content;
+    width: 92%;
+    border: 2px solid rgba(0, 0, 0, 0.705) ;
+    border-radius: 5px;
+}
+.shiping p , .bName , .sPage , .rateN , .castumColor{
+    color: #1F8394;
+}
+
+.review .stars h6 .starRate {
+    width: 60%;
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 3px;
+    border:2px solid rgb(97, 96, 96);
+    display: inline-block;
+}
+
+.review .stars h6 .starRate4 {
+    background-image: linear-gradient(to right , #DE7921 70%, #ffffff 70%);
+}
+
+.review .stars h6 .starRate2 {
+    background-image: linear-gradient(to right, #DE7921 20%, #ffffff 20%);
+}
+
+.customerReview .profileImg {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.customerReview .profileImg img {
+    width: 100%;
+    height: 100%;
+}
+.customerReview .profileImg h5 {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    margin-left: 20px;
+}
+
+.customerReview .purchase {
+    color: #DE7921;
+}
+.customer3 .pat {
+    width: 130px;
+}
+
+.paying .daysShip {
+    color: #B12704;
+}
+
+.btn1 , .btn2 {
+    width: 100%;
+    margin: 8px 0;
+    border-radius: 20px;
+}
+.btn1{
+    background-color: #FFD814;
+}
+.btn2{
+    background-color: #FFA41C;
+}
+
+
+
+@media (min-width: 1361px) {
+    .mainImg img{
+        height: 80% !important;
+        width: 80% !important;
+    }
+    .otherImg img{
+        width: 70px  !important;
+        height: 80px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1360px) {
+    .otherImg img{
+        width: 70px  !important;
+        height: 80px !important;
+    }
+    .mainImg img{
+        height: 45vh !important;
+        width: 90% !important;
+    }
+    .rate {
+        flex-direction: column !important;
+    }
+    .rate .pip {
+        display: none;
+    }
+
+    .paying {
+        width: 96%;
+    }
+    .shipDetails {
+        font-size: 12px !important;
+        gap: 10px !important;
+    }
+} 
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .otherImg img{
+        width: 70px  !important;
+        height: 80px !important;
+    }
+    .mainImg img{
+        height: 35vh !important;
+        width: 90% !important;
+    }
+    .pay{
+        margin: 0 auto 15px  auto !important;
+    }
+    .review .stars h6 .starRate{
+        width: 55%;
+    }
+    .rate {
+        flex-direction: column !important;
+    }
+        .rate .pip {
+        display: none;
+    }
+}
+
+@media (min-width: 500px ) and (max-width: 767px) {
+    
+    .pay {
+        margin: 0 auto 15px  auto !important;
+    }
+    .review{
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .rate {
+        flex-direction: column !important;
+    }
+    .rate .pip {
+        display: none;
+    }
+    .pay{
+        margin-bottom: 15px !important;
+    }
+}

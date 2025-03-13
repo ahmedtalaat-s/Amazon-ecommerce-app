@@ -1,0 +1,27 @@
+li {
+  list-style: none;
+}
+
+section,
+footer {
+  background-color: var(--bg-main-footer);
+  color: var(--white-color);
+}
+section {
+  border: solid 0.0625rem #4c4c4c;
+}
+.back-to-top {
+  background-color: var(--bg-back-to-top);
+}
+.footer-colmun h3,
+.footer-colmun h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+footer {
+  background-color: var(--bg-sec-footer);
+}
+footer .footer-colmun ul li {
+  color: var(--text-footer-color);
+}

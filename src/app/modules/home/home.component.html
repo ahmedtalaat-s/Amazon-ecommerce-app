@@ -84,7 +84,7 @@
         <p>{{ item.name }}</p>
       </div>
 
-      <a href="/src/app/modules/all-products/all-products.component.html">{{category.TextLink}}</a>
+      <a routerLink="/allproducts">{{category.TextLink}}</a>
     </div>
     <!-- ==============================================end cards section one===================================================== -->
 
@@ -145,7 +145,7 @@
           <img [src]="items.img" [alt]="" class="w-100 h-75" />
         </div>
 
-        <a href="/src/app/modules/all-products/all-products.component.html">Explore more</a>
+        <a routerLink="/allproducts">Explore more</a>
       </div>
       <!-- {{2}} -->
       <div id="card" class="d-flex flex-wrap gap-1">
@@ -170,7 +170,7 @@
           <p>{{ items.name }}</p>
         </div>
 
-        <a href="/src/app/modules/all-products/all-products.component.html">See more</a>
+        <a routerLink="/allproducts">See more</a>
       </div>
     </div>
     <!-- ==============================================end cards section two===================================================== -->
@@ -179,7 +179,7 @@
       <h3 style="display: inline; margin-right: 15px">
         Min. 50% off | Unique kitchen finds | Amazon Brands & more
       </h3>
-      <a href="/src/app/modules/all-products/all-products.component.html" class="Link">See all</a>
+      <a routerLink="/allproducts" class="Link">See all</a>
       <button class="carousel-btns prev-btns" (click)="PrevSlide()">❮</button>
 
       <div class="carousel-containers">

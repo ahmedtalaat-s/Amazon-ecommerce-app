@@ -10,7 +10,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
   selector: 'app-home',
   standalone: true,
 
-  imports: [CommonModule,RouterModule, NavbarComponent, FooterComponent],
+  imports: [CommonModule, RouterModule],
 
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
@@ -367,7 +367,7 @@ export class HomeComponent {
 
 
 
-  // slider two 
+  // slider two
   currentIndexs = 0;
   itemWidths = 160;
   TotalImages = this.slidtwo.length;

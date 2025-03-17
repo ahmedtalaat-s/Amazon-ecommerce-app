@@ -137,7 +137,7 @@
                     <p class='grey-text-2'>Save extra with No Cost EMI</p>
                     <p class='delivery'>FREE delivery by <span>{{item.date}},<br>
                       7:00 am - 9:00 pm</span></p>
-                    <div class='add-to-card'>Add to cart</div>
+                    <div class="add-to-card" (click)="showCartMssg()">Add to Card</div>
                 </div>
             </div>
         </div>
@@ -146,3 +146,7 @@
 
   </div>
   </div>
+
+
+  <div class="add-to-cart-mssg" [style.opacity]="cartMssgOpacity">the product is added successfully</div>
+

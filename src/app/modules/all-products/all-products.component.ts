@@ -1,5 +1,5 @@
 
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit , ElementRef, ViewChild, AfterViewInit  } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -14,9 +14,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: './all-products.component.html',
   styleUrl: './all-products.component.css'
 })
-export class AllProductsComponent implements OnInit {
+export class AllProductsComponent implements OnInit  {
   constructor(private _ProductsService: ProductsService) {}
-
 
   products: any[] = [];
   allProducts: any[] = [];
@@ -84,7 +83,7 @@ export class AllProductsComponent implements OnInit {
         this.allProducts[1], this.allProducts[9]
       ];
     } else if (priceId === 'price-1' || priceId === 'price-3') {
-      this.products = []; 
+      this.products = [];
     } else if (priceId === 'all') {
       this.products = [...this.allProducts];
     }
@@ -101,6 +100,19 @@ export class AllProductsComponent implements OnInit {
       targetCircle.style.borderColor = '#1F8394';
       targetCircle.style.borderWidth = '2px';
     }
+  }
+
+
+
+  cartMssgOpacity = "0"; 
+
+  showCartMssg() {
+    this.cartMssgOpacity = "1";
+
+        setTimeout(() => {
+      this.cartMssgOpacity = "0";
+    }, 2000);
+  
   }
 
 }

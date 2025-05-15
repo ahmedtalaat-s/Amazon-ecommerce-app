@@ -2,6 +2,8 @@
 
 A simple eCommerce web application built using Angular and Firebase Authentication. Users can sign up, log in, browse products, view product details, and filter products. Product data is fetched from a mock API.
 
+🔗 **Live Demo**: [amazon-ecommerceapp.netlify.app](https://amazon-ecommerceapp.netlify.app/)
+
 ## Features
 
 - **Authentication (Login / Sign Up):**

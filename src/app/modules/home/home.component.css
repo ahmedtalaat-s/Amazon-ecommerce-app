@@ -206,7 +206,7 @@ a{
   }
 
   .carousel-btns {
-    display: none;
+    display: block;
   }
 
   .progress-bars {
